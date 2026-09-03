@@ -2,6 +2,11 @@
 
 Check out the [huggingface model page](https://huggingface.co/Lkkash/distilbert-book-reviews) for more information about the model.
 
+### Model Sources:
+Repository: https://huggingface.co/distilbert/distilbert-base-uncased (Base model)
+Repository: https://huggingface.co/datasets/Lkkash/book-reviews-from-amazon-and-goodreads (For the dataset)
+
+### Description: 
 Given the text of a book review, the model predicts whether the review expresses a good/positive or bad/negative sentiment.
 This model is intended for sentiment classification of English-language book reviews. Given the text of a book review, the model predicts whether the review expresses a good/positive or bad/negative sentiment. The model can be used for: Classifying individual book reviews by sentiment. Automatically categorizing large collections of book reviews. Exploring sentiment trends in book-review datasets. Educational and research projects involving NLP and text classification. The model is intended primarily for English-language book reviews similar to those in its training data.
 
@@ -9,11 +14,15 @@ Run the model directly from this code: [inference.py](inference.py)
 
 The model was fine-tuned from [this dataset](https://huggingface.co/datasets/Lkkash/book-reviews-from-amazon-and-goodreads ) from [huggingface.co](huggingface.co)
 
-The model was fine-tuned on a dataset containing approximately 107,000 book reviews collected from Amazon and Goodreads. The training data was loaded from books_only_reviews_clean.csv. Only the text and label columns were used for training. The label column was renamed to labels for compatibility with the Hugging Face Trainer. The labels represent binary sentiment: 0 — Bad/negative review 1 — Good/positive review The dataset was divided into training and validation subsets using an 80/20 split with stratified sampling. This resulted in approximately: Training set: 85,600 reviews Validation set: 21,400 reviews Stratified sampling was used to maintain a similar proportion of the two sentiment classes in both subsets. The split used a random seed of 42.
+<p align="center">
+  <img src="" alt="Model working" width="800">
+</p>
 
 ## Fine-tuning
 
-The model was finetuned from this code: [train.py](train.py)
+The model was fine-tuned on a dataset containing approximately 107,000 book reviews collected from Amazon and Goodreads. The training data was loaded from books_only_reviews_clean.csv. Only the text and label columns were used for training. The label column was renamed to labels for compatibility with the Hugging Face Trainer. The labels represent binary sentiment: 0 — Bad/negative review 1 — Good/positive review The dataset was divided into training and validation subsets using an 80/20 split with stratified sampling. This resulted in approximately: Training set: 85,600 reviews Validation set: 21,400 reviews Stratified sampling was used to maintain a similar proportion of the two sentiment classes in both subsets. The split used a random seed of 42.
+
+The source code: for finetuning: [train.py](train.py)
 
 The metrics were as follows:
 
