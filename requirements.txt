@@ -1,0 +1,7 @@
+transformers 
+scikit-learn
+datasets 
+pandas 
+numpy 
+torch 
+'accelerate>=1.10'
