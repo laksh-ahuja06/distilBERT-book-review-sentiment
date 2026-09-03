@@ -12,8 +12,6 @@ This model is intended for sentiment classification of English-language book rev
 
 Run the model directly from this code: [inference.py](inference.py)
 
-The model was fine-tuned from [this dataset](https://huggingface.co/datasets/Lkkash/book-reviews-from-amazon-and-goodreads ) from [huggingface.co](huggingface.co)
-
 <b> Why did i choose Distilbert-base-uncased for text classification: </b> This is a small, fast, and light Transformer model developed by Hugging Face and one of its
 common application is sentiment analysis.
 
@@ -27,8 +25,9 @@ common application is sentiment analysis.
 
 ## Fine-tuning
 
-The model was fine-tuned on a dataset containing approximately 107,000 book reviews collected from Amazon and Goodreads. The training data was loaded from books_only_reviews_clean.csv. Only the text and label columns were used for training. The label column was renamed to labels for compatibility with the Hugging Face Trainer. The labels represent binary sentiment: 0 — Bad/negative review 1 — Good/positive review The dataset was divided into training and validation subsets using an 80/20 split with stratified sampling. This resulted in approximately: Training set: 85,600 reviews Validation set: 21,400 reviews Stratified sampling was used to maintain a similar proportion of the two sentiment classes in both subsets. The split used a random seed of 42.
+The model was fine-tuned on a dataset containing approximately 107,000 book reviews collected from Amazon and Goodreads. The training data was loaded from books_only_reviews_clean.csv. Only the text and label columns were used for training. The label column was renamed to labels for compatibility with the Hugging Face Trainer. The labels represent binary sentiment: 0 — Bad/negative review 1 — Good/positive review The dataset was divided into training and validation subsets using an 80/20 split with stratified sampling. This resulted in approximately: Training set: 85,600 reviews Validation set: 21,400 reviews Stratified sampling was used to maintain a similar proportion of the two sentiment classes in both subsets. The split used a random seed of 42. <br> <br>
 
+The model was fine-tuned from [Lkkash/book-reviews-from-amazon-and-goodreads](https://huggingface.co/datasets/Lkkash/book-reviews-from-amazon-and-goodreads ) from [huggingface.co](huggingface.co) <br>
 The source code: for finetuning: [train.py](train.py)
 
 The metrics were as follows:
