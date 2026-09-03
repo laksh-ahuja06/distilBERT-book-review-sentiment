@@ -1,9 +1,9 @@
-# distilBERT-book-review-sentiment
+# DistilBERT Book Review Sentiment
 
-Check out the [huggingface model page](https://huggingface.co/Lkkash/distilbert-book-reviews) for more information about the model.
+## Check out the [Huggingface Model Page](https://huggingface.co/Lkkash/distilbert-book-reviews) for more information about the model.
 
 ### Model Sources:
-Repository: https://huggingface.co/distilbert/distilbert-base-uncased (Base model)
+Repository: https://huggingface.co/distilbert/distilbert-base-uncased (Base model) <br>
 Repository: https://huggingface.co/datasets/Lkkash/book-reviews-from-amazon-and-goodreads (For the dataset)
 
 ### Description: 
@@ -14,9 +14,16 @@ Run the model directly from this code: [inference.py](inference.py)
 
 The model was fine-tuned from [this dataset](https://huggingface.co/datasets/Lkkash/book-reviews-from-amazon-and-goodreads ) from [huggingface.co](huggingface.co)
 
+<b> Why did i choose Distilbert-base-uncased for text classification: </b> This is a small, fast, and light Transformer model developed by Hugging Face and one of its
+common application is sentiment analysis.
+
+<b> Working: </b> The encoder in DistilBERT works by processing text through 6 layers of multi-head self-attention, which calculates how words relate to each other bidirectionally. It maps input tokens into a geometric vector space, dynamically updating each word's representation based on its surrounding context.
+
+<br>
 <p align="center">
-  <img src="" alt="Model working" width="800">
+  <img src="Bert.png" alt="Model working" width="300">
 </p>
+<br>
 
 ## Fine-tuning
 
